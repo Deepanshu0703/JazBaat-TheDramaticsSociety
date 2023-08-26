@@ -10,6 +10,90 @@ body {
   background-blend-mode: overlay;
 }
 
+.landing_page{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/src/assets/images/jazbaatBackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  background-color: #252525;
+  color: rgb(247, 219, 106);
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  height: 70px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #121212;
+  border: 2px solid hsl(42, 99%, 50%);
+  position: absolute;
+  top: 0;
+}
+
+.header .navbar .jazbaat_logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  margin-left: 20px;
+  position: relative;
+  bottom: 5px;
+}
+
+.header .navbar .jazbaat_logo img{
+  width: 200px;
+  height: 60px;
+}
+
+.header .navbar .nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.header .navbar .nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  font-size: 20px;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  letter-spacing: 0.9px;
+}
+
+.jazbaat_banner .main_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.jazbaat_banner .main_logo img{
+  margin-top: 10%;
+  width: 50%;
+  min-width: 450px;
+  height: 80%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
