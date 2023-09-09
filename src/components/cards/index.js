@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Cards({eventInfo}){
+const Cards = ({eventInfo})=>{
     return (
       <>
         {eventInfo.map((info)=>(
@@ -23,3 +23,4 @@ export function Cards({eventInfo}){
       </>
       )
 };
+export default Cards;

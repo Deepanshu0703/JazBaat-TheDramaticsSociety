@@ -1,6 +1,6 @@
 import React,{useEffect,useCallback} from "react";
 
-export const BgBlob = () => {
+const BgBlob = () => {
 
   const setFromEvent = useCallback((e) => { 
     let loopStarted = false;
@@ -39,3 +39,4 @@ export const BgBlob = () => {
   );
 };
 
+export default BgBlob;
