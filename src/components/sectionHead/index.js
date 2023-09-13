@@ -34,7 +34,7 @@ const EventsHeader = styled.div`
     }
 `;
 
-export function EventsHead(props){
+const EventsHead = (props)=>{
     return(
       <span className="events">
         <EventsHeader>Events</EventsHeader>
@@ -42,3 +42,4 @@ export function EventsHead(props){
     )
 }
 
+export default EventsHead;

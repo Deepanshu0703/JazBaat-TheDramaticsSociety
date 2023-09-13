@@ -1,15 +1,16 @@
-import React from 'react';
+import React,{lazy,Suspense, useEffect,useRef,useState} from 'react';
 import './App.css';
-import { BgBlob } from './components/bgBlur';
-import { Cards } from './components/cards';
-import { EventsHead } from './components/sectionHead';
-import { LandingPage } from './components/websiteHeader';
-import { About } from './components/about';
+import Loader from './components/loader';
 import MonoActPic from '../src/assets/images/eventMonoact.JPG';
 import NukkadPic from '../src/assets/images/eventNukkad.JPG';
 import StageActPic from '../src/assets/images/eventStage.JPG';
 import MimesPic from '../src/assets/images/eventMimes.jpg';
 import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
+const BgBlob = lazy(()=> import('./components/bgBlur'));
+const Cards = lazy(()=>import('./components/cards'));
+const EventsHead = lazy(()=>import('./components/sectionHead'));
+const LandingPage = lazy(()=>import('./components/websiteHeader'));
+const About = lazy(()=>import('./components/about'));
 
 function App() {
   const [eventInfo,setEventInfo] = React.useState([
@@ -22,17 +23,17 @@ function App() {
   return (
       <div className="Jazbaat">
         <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={[<LandingPage/>,
-            <About/>,
-            <EventsHead/>,
-            <Cards eventInfo={eventInfo}/>,
-            <BgBlob/>]}
-          />
-        </Routes>
-      </Router>
+          <Routes>
+            <Route
+              path="/"
+              element={<Suspense fallback={<Loader/>}><LandingPage/>
+              <About/>
+              <EventsHead/>
+              <Cards eventInfo={eventInfo}/>
+              <BgBlob/></Suspense>}
+            />
+          </Routes>
+        </Router>
       </div>
     
   );

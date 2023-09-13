@@ -1,4 +1,4 @@
-body {
+body{
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -11,10 +11,78 @@ body {
   overflow-x: hidden;
 }
 
+.loader{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #252525;
+  color: #faca08;
+  font-size: 25px;
+  overflow: hidden;
+}
+
+.loader .loading_boxes{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  position: relative;
+  animation: revolve 4s ease-in-out infinite;
+}
+
+.loader .loading_boxes .load_box{
+  width: 15px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #faca08;
+}
+
+.loader .loading_boxes .load_box:nth-child(1){
+  place-self: end end;
+}
+
+.loader .loading_boxes .load_box:nth-child(2){
+  place-self: end start;
+}
+
+.loader .loading_boxes .load_box:nth-child(3){
+  place-self: start end;
+}
+
+.loader .loading_boxes .load_box:nth-child(4){
+  place-self: start start;
+}
+
+@keyframes revolve{
+  0%,100%{
+    transform: rotate(45deg);
+    gap: 15px;
+  }
+  12.5%,37.5%,62.5%,87.5%{
+    gap: 5px;
+  }
+  25%{
+    transform: rotate(135deg);
+    gap: 15px;
+  }
+  50%{
+    transform: rotate(225deg);
+    gap: 15px;
+  }
+  75%{
+    transform: rotate(315deg);
+    gap: 15px;
+  }
+}
+
 .landing_page{
   width: 100%;
   height: 100vh;
-  background-image: url(/src/assets/images/jazbaatBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -168,9 +236,33 @@ body {
 
 .jazbaat_banner .main_logo img{
   margin-top: 10%;
-  width: 90%;
+  width: 100%;
+  aspect-ratio: 631/502;
   min-width: 250px;
-  max-width: 650px;
+  max-width: 631px;
+}
+
+.jazbaatLogoImg{
+  display: none;
+}
+
+.jazbaatLogoGif{
+  display: block;
+  animation: firstAnimation 2s ease-in-out;
+}
+
+@keyframes firstAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .about{
@@ -360,7 +452,7 @@ body {
 
 @media (550px<width<=780px){
   .jazbaat_banner .main_logo img{
-    width: 80%;
+    width: 85%;
   }
   .about p{
     font-size: 15px;
@@ -398,6 +490,14 @@ body {
 }
 
 @media (300px<width<=550px){
+  .loader{
+    font-size: 40px;
+  }
+  
+  .loader .loading_boxes{
+    width: 60px;
+    height: 60px;
+  }
   .header .navbar .jazbaat_logo img{
     width: 150px;
     height: 45px;
@@ -406,6 +506,9 @@ body {
   .header .navbar .navIcon{
     font-size: 25px;
     padding-right: 25px;
+  }
+  .jazbaat_banner .main_logo img{
+    width: 90%;
   }
   .about h1{
     font-size: 17vw;
@@ -446,6 +549,10 @@ body {
 }
 
 @media (width<=300px){
+  .loader{
+    flex-direction: column;
+    gap: 0px;
+  }
   .header .navbar .jazbaat_logo img{
     width: 150px;
     height: 45px;
@@ -454,6 +561,9 @@ body {
   .header .navbar .navIcon{
     font-size: 25px;
     padding-right: 25px;
+  }
+  .jazbaat_banner .main_logo img{
+    width: 90%;
   }
   .about h1{
     font-size: 17vw;
