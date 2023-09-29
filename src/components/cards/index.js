@@ -16,7 +16,7 @@ const Cards = ({eventInfo})=>{
                 return <span className="popUpLetter" key={index}>{word}</span>
               })}</h1>
               <p >{info.description}</p>
-              <a href="/">Performances</a>
+              <a href="/"><span>Performances</span><span>Performances</span></a>
             </div>
           </div>
         ))}

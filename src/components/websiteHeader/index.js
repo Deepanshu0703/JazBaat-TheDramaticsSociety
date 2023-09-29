@@ -1,8 +1,5 @@
 import React,{useEffect, useRef, useState} from 'react';
-import logo from '../../assets/images/Jazbaat_Name.png';
-import main_logo from '../../assets/images/jazbaatMainLogo.png';
-import jazbaatLoader from '../../assets/images/jazbaatMainGif.gif';
-import jazbaatBackground from '../../assets/images/jazbaatBackground.jpg';
+import Images from '../../assets/images';
 import {IoMenu} from 'react-icons/io5';
 import {FaTimes} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -21,7 +18,7 @@ const LandingPage=()=> {
     }
     useEffect(()=>{
         if(landingRef.current!=null){
-            landingRef.current.style.backgroundImage=`url(${jazbaatBackground})`;
+            landingRef.current.style.backgroundImage=`url(${Images.jazbaatBackground})`;
         }
         if(gifRef.current!=null)
             setTimeout(() => {
@@ -34,7 +31,7 @@ const LandingPage=()=> {
             <div className="header">
                 <div className="navbar">
                     <div className="jazbaat_logo">
-                        <img src={logo} alt="Jazbaat"/>
+                        <img src={Images.logo} alt="Jazbaat"/>
                     </div>
                     <div className="navIcon">
                         <span className="barIcon" onClick={()=>{setNavBar(!navBar)}}>{navBar?<FaTimes/>:<IoMenu/>}</span>
@@ -59,8 +56,8 @@ const LandingPage=()=> {
             </div>
             <div className="jazbaat_banner">
                 <div className="main_logo">
-                    <img ref={imgRef} src={main_logo} alt='main_logo' className='jazbaatLogoImg'/>
-                    <img ref={gifRef} src={jazbaatLoader} alt='jazbaat_gif' className='jazbaatLogoGif'/>
+                    <img ref={imgRef} src={Images.main_logo} alt='main_logo' className='jazbaatLogoImg'/>
+                    <img ref={gifRef} src={Images.jazbaatLoader} alt='jazbaat_gif' className='jazbaatLogoGif'/>
                 </div>
             </div>
         </div>
