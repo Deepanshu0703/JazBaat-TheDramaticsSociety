@@ -9,6 +9,7 @@ body{
   text-align: center;
   background-blend-mode: overlay;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .loader{
@@ -280,14 +281,6 @@ body{
   z-index: 2;
 }
 
-.about h1{
-  margin: 15px;
-  color: hsl(42, 99%, 50%);
-  font-size: 100px;
-  font-weight: 700;
-  text-align: center;
-}
-
 .about p{
   margin-inline: 10%;
   font-weight: 400;
@@ -299,6 +292,35 @@ body{
 .about p .highlightWord:hover{
   color: hsl(42, 99%, 50%);
   cursor: pointer;
+}
+.events>h1,.about h1,.gallery_header h1, .team_section h1{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: hsl(0, 0%, 28%);
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  cursor: pointer;
+  margin-top: 5%;
+  text-transform: uppercase;
+  background: linear-gradient(to right, hsl(42, 82%, 72%) 0, hsl(58, 90%, 72%) 10%, hsl(42, 99%, 50%) 20%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 60vw;
+  }
+  100% {
+    background-position: 100vw;
+  }
 }
 
 .container {
@@ -358,7 +380,7 @@ body{
 }
 
 .card-info h1 {
-  font-size: 8vw;
+  font-size: 6vw;
   margin: 16px 0;
   color: rgb(247, 219, 106);
 }
@@ -400,37 +422,6 @@ body{
   width: 100%;
 }
 
-.bg-blob {
-  display: none;
-  background-color: white;
-  width: 340px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgb(98, 109, 29), rgb(182, 152, 30));
-  animation: rotate 6s linear infinite;
-  opacity: 0.3;
-  z-index: 1;
-  filter: blur(50px);
-}
-
-@keyframes rotate{
-  0%{
-    transform: rotateZ(0deg);
-    aspect-ratio: 7/5;
-  }
-  50%{
-    transform: rotateZ(90deg);
-    aspect-ratio: 6/5;
-  }
-  100%{
-    transform: rotateZ(180deg);
-    aspect-ratio: 7/5;
-  }
-}
-
 .gallery{
   display: flex;
   flex-direction: column;
@@ -456,14 +447,6 @@ body{
   width: 100%;
 }
 
-.gallery_header h1{
-  margin: 15px;
-  color: hsl(42, 99%, 50%);
-  font-size: 100px;
-  font-weight: 700;
-  text-align: center;
-}
-
 .gallery .gallery_media{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -475,7 +458,7 @@ body{
 }
 
 .gallery .gallery_media img{
-  width: 80%;
+  width: 70%;
   border: 10px solid rgb(241, 234, 234);
   border-bottom: 60px solid rgb(241, 234, 234);
   aspect-ratio: 10/9;
@@ -487,7 +470,7 @@ body{
 }
 
 .gallery .gallery_media img:nth-child(1){
-  margin-left: 45%;
+  margin-left: 55%;
   rotate: 10deg;
 }
 
@@ -497,12 +480,12 @@ body{
 }
 
 .gallery .gallery_media img:nth-child(3){
-  margin-right: 40%;
+  margin-right: 50%;
   rotate: -12deg;
 }
 
 .gallery .gallery_media img:nth-child(4){
-  margin-left: 45%;
+  margin-left: 55%;
   width: 70%;
   rotate: -15deg;
   z-index: 1;
@@ -510,21 +493,21 @@ body{
 
 .gallery .gallery_media img:nth-child(5){
   margin-top: -20%;
-  width: 85%;
+  width: 80%;
   z-index: 2;
   aspect-ratio: 5/4;
 }
 
 .gallery .gallery_media img:nth-child(6){
-  margin-right: 45%;
+  margin-right: 55%;
   width: 70%;
   rotate: 20deg;
   z-index: 1;
 }
 
 .gallery .gallery_media img:nth-child(7){
-  margin-left: 40%;
-  margin-top: -30%;
+  margin-left: 50%;
+  margin-top: -25%;
 }
 
 .gallery .gallery_media img:nth-child(8){
@@ -534,16 +517,17 @@ body{
 }
 
 .gallery .gallery_media img:nth-child(9){
-  margin-top: -30%;
-  margin-right: 40%;
+  margin-top: -25%;
+  margin-right: 50%;
   rotate: 5deg;
 } 
 
 .gallery .gallery_media img:hover{
   transform: scale(1.1);
   filter: grayscale(0);
+  rotate: 0deg;
   z-index: 10;
-  transition: 0.69s;
+  transition: 0.2s;
 }
 
 .gallery a{
@@ -578,6 +562,189 @@ body{
   opacity: 0.8;
 }
 
+.team_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(90deg, #121212 0%, #252525 100%);
+  color: rgb(241, 234, 234);
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+
+.team_section .team_cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.team-card-wrap {
+  margin: 30px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  z-index: 2;
+  
+  &:hover {
+    .team-card-bg {
+      transition: 
+        0.6s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+      opacity: 0.8;
+    }
+    .team-card {
+      transition: 0s cubic-bezier(0.23, 1, 0.32, 1);
+      border: 2px solid rgb(247, 219, 106) ; 
+    }
+    .team-card-info{
+      animation: travel 0.33s ease-out 1;
+    }
+    .team-card-info p:nth-child(1) {
+      display: none;
+    }
+    .team-card-info p:nth-child(2) {
+      display: block;
+    }
+    .team-card-contact{
+      display: flex;
+    }
+  }
+}
+
+@keyframes travel{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(30%);
+  }
+}
+
+.team-card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 240px;
+  width: 380px;
+  height: 430px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgb(251, 205, 20);
+  transition: 0s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  margin:50px;
+}
+
+.team-card-bg {
+  opacity: 0.5;
+  position: absolute;
+  top: -20px; 
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition:
+    1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
+}
+
+.team-card-info {
+  padding: 20px;
+  position: absolute;
+  bottom: 30px;
+  color: rgb(241, 234, 234);
+  transform: translateY(30%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.team-card-info:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
+    background-blend-mode: overlay;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .team-card-info p{
+    font-size: 35px;
+    font-weight: 650;
+    text-shadow: rgba(black, 0.5) 0 10px 10px;
+    color: rgb(250, 202, 8);
+  }
+
+  .team-card-info p:nth-child(1) {
+    display: block;
+  }
+
+  .team-card-info p:nth-child(2){
+    display: none;
+    margin-bottom: 0;
+  }
+
+  .team-card-contact{
+    display: none;
+    width: 100%;
+  }
+
+  .team-card-info span{
+    font-size: 25px;
+    font-weight: 400;
+    margin-inline: 10px;
+    color: rgb(250, 202, 8);
+    & a{
+      color: rgb(250, 202, 8);
+      text-decoration: none;
+    }
+  }
+
+.footer_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  padding-top: 20px;
+  font-size: 30px;
+  background: linear-gradient(to right, rgb(250, 202, 8), rgb(182, 152, 30));
+}
+
+.footer_section div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #252525;
+}
+
+.footer_section div a{
+  color: #252525;
+  text-decoration: none;
+}
+
+.footer_section .footer-links{
+  font-size: 20px;
+}
+
+
 @media (width>=900px){
   .header .navbar .navIcon{
     display: none;
@@ -588,7 +755,7 @@ body{
   .popUpLetter:hover {
     position: relative;
     bottom: 0.7vw;
-    font-size: 8vw;
+    font-size: 6vw;
     color: hsl(58, 90%, 72%);
     transition: cubic-bezier(0.23, 1, 0.320, 1);
   }
@@ -674,11 +841,12 @@ body{
   .jazbaat_banner .main_logo img{
     width: 90%;
   }
-  .about h1{
-    font-size: 17vw;
-  }
   .about p{
     margin-inline: 5%;
+  }
+  .about h1,.events>h1,.gallery_header h1,.team_section h1{
+    font-size: 17vw;
+    animation: shine 6s infinite linear;
   }
   .event-card{
     flex-direction: column;
@@ -694,7 +862,7 @@ body{
     opacity: 0;
     width: 93%;
     height: 90%;
-    padding: 22px 0 20px 15px;
+    padding: 22px 0 20px 16px;
     line-height: 1.3;
     backdrop-filter: blur(5px);
     border-radius: 20px;
@@ -704,18 +872,33 @@ body{
     transition: .9s;
   }
   .card-info p{
-    font-size: 15.5px;
+    font-size: 15px;
   }
   .card-info h1{
     margin-top: 30px;
     font-size: 15vw;
   }
-  .gallery h1{
-    font-size: 17vw;
-  }
   .gallery .gallery_media img{
     border: 5px solid rgb(241, 234, 234);
     border-bottom: 30px solid rgb(241, 234, 234);
+  }
+  .team-card{
+    width: 250px;
+    height: 300px;
+  }
+  .team-card-wrap{
+    margin: 0px;
+  }
+  .team-card-info p{
+    font-size: 25px;
+  }
+  .footer_section{
+    padding-top: 0;
+    font-size: 5vw;
+    gap: 0;
+  }
+  .footer_section .footer-links{
+    font-size: 3vw;
   }
 }
 
@@ -736,8 +919,9 @@ body{
   .jazbaat_banner .main_logo img{
     width: 90%;
   }
-  .about h1{
+  .about h1,.events>h1,.gallery_header h1,.team_section h1{
     font-size: 17vw;
+    animation: shine 6s infinite linear;
   }
   .card-info a{
     padding-top: 0;
@@ -767,15 +951,12 @@ body{
     transition: .9s;
   }
   .card-info p{
-    font-size: 15px;
+    font-size: 14.5px;
   }
   .card-info h1{
     margin-top: 30px;
     font-size: 15vw;
     width : auto;
-  }
-  .gallery h1{
-    font-size: 17vw;
   }
   .gallery .gallery_media img{
     border: 5px solid rgb(241, 234, 234);
@@ -783,5 +964,27 @@ body{
   }
   .gallery a{
     font-size: 20px;
+  }
+  .team-card{
+    width: 200px;
+    height: 250px;
+  }
+  .team-card-wrap{
+    margin: 0px;
+  }
+  .team-card-info p{
+    font-size: 20px;
+  }
+  .team-card-contact span{
+    font-size: 20px;
+    margin-inline: 5px;
+  }
+  .footer_section{
+    padding-top: 0;
+    font-size: 5vw;
+    gap: 0;
+  }
+  .footer_section .footer-links{
+    font-size: 3vw;
   }
 }

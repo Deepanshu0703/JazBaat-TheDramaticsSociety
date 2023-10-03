@@ -38,18 +38,18 @@ const LandingPage=()=> {
                         <div className={navBar?"side_nav":"hide"}>
                             <ul>
                                 <li onClick={navTo('.events')}>EVENTS</li>
-                                <li>GALLERY</li>
-                                <li>TEAM</li>
-                                <li>CONTACT</li>
+                                <li onClick={navTo('.gallery')}>GALLERY</li>
+                                <li onClick={navTo('.team_section')}>TEAM</li>
+                                <li onClick={navTo('.footer_section')}>CONTACT</li>
                             </ul>
                         </div>
                     </div>
                     <div className="nav">
                         <ul>
                             <li onClick={navTo('.events')}>EVENTS</li>
-                            <li>GALLERY</li>
-                            <li>TEAM</li>
-                            <li>CONTACT</li>
+                            <li onClick={navTo('.gallery')}>GALLERY</li>
+                            <li onClick={navTo('.team_section')}>TEAM</li>
+                            <li onClick={navTo('.footer_section')}>CONTACT</li>
                         </ul>
                     </div>
                 </div>

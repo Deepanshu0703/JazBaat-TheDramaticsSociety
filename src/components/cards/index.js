@@ -2,7 +2,8 @@ import React from "react";
 
 const Cards = ({eventInfo})=>{
     return (
-      <>
+      <div className="events">
+      <h1>Events</h1>
         {eventInfo.map((info)=>(
           <div className="event-card" key={info.id}>
             <div className="card" >
@@ -20,7 +21,7 @@ const Cards = ({eventInfo})=>{
             </div>
           </div>
         ))}
-      </>
+      </div>
       )
 };
 export default Cards;
