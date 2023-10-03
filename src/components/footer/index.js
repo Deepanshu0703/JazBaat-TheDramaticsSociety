@@ -10,7 +10,7 @@ const Footer = () => {
     const youtubeLink = 'https://www.youtube.com/user/jazbaatiiitdmj'
     const mailLink = 'mailto:jazbaat@iiitdmj.ac.in'
     const collegeLink = 'https://iiitdmj.ac.in/'
-    const developerLink = '#'
+    const developerLink = 'https://www.linkedin.com/in/samaksh-agarwal-4b0a57166/'
     
   return (
     <div className='footer_section'>
