@@ -1,14 +1,14 @@
-import React,{lazy,Suspense,useRef,useState} from 'react';
+import React,{lazy,Suspense,useState} from 'react';
 import './App.css';
 import Loader from './components/loader';
 import Images from './assets/images';
 import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
-const BgBlob = lazy(()=>import('./components/bgBlur'));
 const Cards = lazy(()=>import('./components/cards'));
-const EventsHead = lazy(()=>import('./components/sectionHead'));
 const LandingPage = lazy(()=>import('./components/websiteHeader'));
 const About = lazy(()=>import('./components/about'));
 const Gallery = lazy(()=>import('./components/gallery'));
+const Team = lazy(()=>import('./components/team'));
+const Footer = lazy(()=>import('./components/footer'));
 
 function App() {
   const [eventInfo,setEventInfo] = useState([
@@ -26,10 +26,11 @@ function App() {
               path="/"
               element={<Suspense fallback={<Loader/>}><LandingPage/>
               <About/>
-              <EventsHead/>
               <Cards eventInfo={eventInfo} />
-              <BgBlob/>
-              <Gallery/></Suspense>}
+              <Gallery/>
+              <Team/>
+              <Footer/>
+              </Suspense>}
             />
           </Routes>
         </Router>
