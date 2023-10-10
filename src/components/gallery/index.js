@@ -19,6 +19,9 @@ const Gallery = () => {
             <img src={Images.img1} alt="MimesPic"/>
         </div>
         <a href='/' className="gallery_button"><span>Explore More</span><span>Explore More</span></a>
+        <div className="quote_section">
+          <p>लाइफ में और फिल्म्स में… अंत में सब कुछ ठीक हो जाता है।</p>
+        </div>
     </div>
   )
 }

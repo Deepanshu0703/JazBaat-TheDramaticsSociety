@@ -422,6 +422,27 @@ body{
   width: 100%;
 }
 
+.quote_section{
+  padding-inline: 10%;
+  padding-block: 10px;
+}
+
+.quote_section p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: hsl(0, 0%, 28%);
+  font-size: 35px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 5%;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, hsl(42, 82%, 72%) , hsl(58, 90%, 72%) , hsl(42, 82%, 72%) , hsl(58, 90%, 72%) , hsl(42, 99%, 50%) );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gallery{
   display: flex;
   flex-direction: column;
@@ -435,7 +456,6 @@ body{
   font-size: 20px;
   position: relative;
   z-index: 2;
-  margin-top: 20px;
   overflow-x: hidden;
 }
 
@@ -573,7 +593,6 @@ body{
   font-size: 20px;
   position: relative;
   z-index: 1;
-  margin-top: 20px;
   overflow-x: hidden;
 }
 

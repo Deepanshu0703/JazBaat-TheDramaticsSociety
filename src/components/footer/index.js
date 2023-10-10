@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className='footer_section'>
         <div className='footer-dialogue'>
-            <p>Ek Baar Jhoor se, Jazbaat ki aur se.</p>
+            <p>मैं उड़ना चाहता हूं, दौड़ना चाहता हूं, गिरना भी चाहता हूं… बस रुकना नहीं चाहता।</p>
         </div>
         <div className='footer-contact'>
             <span><a href={facebookLink}><RiFacebookBoxLine /></a></span>

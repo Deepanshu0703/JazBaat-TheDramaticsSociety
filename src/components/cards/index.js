@@ -21,6 +21,9 @@ const Cards = ({eventInfo})=>{
             </div>
           </div>
         ))}
+        <div className="quote_section">
+          <p>अपनी कामयाबी को इतना छोटा मत समझो… सिर्फ नसीब वालों को नसीब होती है यह।</p>
+        </div>
       </div>
       )
 };
