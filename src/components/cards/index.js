@@ -17,12 +17,12 @@ const Cards = ({eventInfo})=>{
                 return <span className="popUpLetter" key={index}>{word}</span>
               })}</h1>
               <p >{info.description}</p>
-              <a href="/"><span>Performances</span><span>Performances</span></a>
+              <a href="https://www.youtube.com/user/jazbaatiiitdmj"><span>Performances</span><span>Performances</span></a>
             </div>
           </div>
         ))}
         <div className="quote_section">
-          <p>अपनी कामयाबी को इतना छोटा मत समझो… सिर्फ नसीब वालों को नसीब होती है यह।</p>
+          <p>आ काट ले पर तू बन जा क़ैदी हो जा तू पिंजरे में बंद, ये शब्द है किसके कैसी भाषा कैसी मान ले मेरी बातें बस।</p>
         </div>
       </div>
       )

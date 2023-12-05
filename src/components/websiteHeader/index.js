@@ -2,13 +2,12 @@ import React,{useEffect, useRef, useState} from 'react';
 import Images from '../../assets/images';
 import {IoMenu} from 'react-icons/io5';
 import {FaTimes} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+
 
 const LandingPage=()=> {
     const gifRef = useRef(null);
     const imgRef = useRef(null);
     const landingRef = useRef(null);
-    const navigate = useNavigate();
     const [navBar, setNavBar] = useState(false);
     function navTo(className){
         return function(){

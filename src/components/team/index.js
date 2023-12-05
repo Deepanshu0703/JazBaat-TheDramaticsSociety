@@ -71,10 +71,11 @@ const Team = () => {
     <div className="team_section">
         <h1>Team</h1>
         <div className='team_cards'>
-            <Card dataImage={Images.MonoActPic} header="Faculty Incharge" personName={"XYZ"} email={"#"} linkedin={"#"}/>
-            <Card dataImage={Images.NukkadPic} header="Faculty Incharge" personName={"XYZ"} email={"#"} linkedin={"#"}/>
-            <Card dataImage={Images.StageActPic} header="Coordinator" personName={"XYZ"} email={"#"} linkedin={"#"}/>
-            <Card dataImage={Images.MimesPic} header="Co-Coordinator" personName={"XYZ"} email={"#"} linkedin={"#"}/>
+            <Card dataImage={Images.fic1} header="Faculty Incharge" personName={"Kusum K. Bharti"} email={"kusum@iiitdmj.ac.in"} linkedin={"https://www.linkedin.com/in/kusum-kumari-bharti-10598627"}/>
+            <Card dataImage={Images.fic2} header="Faculty Incharge" personName={"Koushik Dutta"} email={"koushikdutta@iiitdmj.ac.in"} linkedin={"http://faculty.iiitdmj.ac.in/faculty/koushikdutta"}/>
+            <Card dataImage={Images.cordinator} header="Coordinator" personName={"Devansh Khandelwal"} email={"devanshkhandelwal930@gmail.com"} linkedin={"https://www.linkedin.com/in/devansh-khandelwal-51b009201?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}/>
+            <Card dataImage={Images.co_cordinator} header="Co-Coordinator" personName={"Gautam Singhal"} email={"singhalgautam922@gmail.com"} linkedin={"https://www.linkedin.com/in/gautam-singhal/"}/>
+            <Card dataImage={Images.co_cordinator2} header="Co-Coordinator" personName={"Roshni Singh"} email={"singhroshni2004@gmail.com"} linkedin={"https://www.linkedin.com/in/roshni-singh-7645sd/"}/>
         </div>
     </div>
   )

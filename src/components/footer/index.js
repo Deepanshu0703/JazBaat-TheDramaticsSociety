@@ -10,12 +10,13 @@ const Footer = () => {
     const youtubeLink = 'https://www.youtube.com/user/jazbaatiiitdmj'
     const mailLink = 'mailto:jazbaat@iiitdmj.ac.in'
     const collegeLink = 'https://iiitdmj.ac.in/'
-    const developerLink = 'https://www.linkedin.com/in/samaksh-agarwal-4b0a57166/'
+    const developerLink1 = 'https://www.linkedin.com/in/samaksh-agarwal-4b0a57166/'
+    const developerLink2='https://deepanshu-portfolio-ku.web.app/'
     
   return (
     <div className='footer_section'>
         <div className='footer-dialogue'>
-            <p>मैं उड़ना चाहता हूं, दौड़ना चाहता हूं, गिरना भी चाहता हूं… बस रुकना नहीं चाहता।</p>
+            <p>एक बार जोर से जज़्बात की ओर से... ।</p>
         </div>
         <div className='footer-contact'>
             <span><a href={facebookLink}><RiFacebookBoxLine /></a></span>
@@ -24,7 +25,7 @@ const Footer = () => {
             <span><a href={mailLink }><MdOutlineMailOutline /></a></span>
         </div>
         <div className='footer-links'>
-            <p><a href={collegeLink}>© IIITDMJ</a> | <a href={developerLink}>Designed & Developed By Samaksh Agarwal</a></p>
+            <p><a href={collegeLink}>© IIITDMJ</a> | Designed & Developed By <a href={developerLink1}>Samaksh Agarwal</a>,<a href={developerLink2}>Deepanshu Kumar</a></p>
         </div>
     </div>
   )
